@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espaço Mente e Corpo</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     LOGIN
+========================================================= -->
+
+<section id="loginScreen" class="login-screen">
+
+    <div class="login-card">
+
+        <div class="login-back">
+            ← Espaço Mente e Corpo
+        </div>
+
+
+        <div class="login-logo">
+
+            <div class="logo-symbol">
+                <img id="logo-mentecorpo" src="./assets/logo--mente-corpo.png" alt="logo mente e corpo">
+            </div>
+
+            <div class="logo-name">
+                ESPAÇO<br>
+                MENTE E CORPO
+            </div>
+
+        </div>
+
+
+        <h1>
+            Entrar
+        </h1>
+
+        <p class="login-description">
+            Acesse sua área na clínica
+        </p>
+
+
+        <form id="loginForm">
+
+
+            <div class="input-group">
+
+                <label>
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    Senha
+                </label>
+
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Digite sua senha"
+                    required
+                >
+
+            </div>
+
+
+            <div class="login-options">
+
+                <label>
+                    <input
+                        type="checkbox"
+                    >
+
+                    Lembrar acesso
+                </label>
+
+
+                <button
+                    type="button"
+                    class="forgot-button"
+                    onclick="forgotPassword()"
+                >
+                    Esqueci minha senha
+                </button>
+
+            </div>
+
+
+            <button
+                type="submit"
+                class="login-button"
+            >
+                Entrar
+            </button>
+
+        </form>
+
+
+        <div class="login-register">
+
+            Não tem uma conta?
+
+            <button
+                onclick="registerMessage()"
+            >
+                Cadastre-se
+            </button>
+
+        </div>
+
+
+        <!-- CONTAS DEMO -->
+
+        <div class="demo-login">
+
+            <strong>
+                Contas para demonstração
+            </strong>
+
+            <span>
+                Admin: admin@clinica.com
+            </span>
+
+            <span>
+                Psicóloga: psicologa@clinica.com
+            </span>
+
+            <span>
+                Médico: medico@clinica.com
+            </span>
+
+            <span>
+                Recepção: recepcao@clinica.com
+            </span>
+
+            <span>
+                Paciente: paciente@clinica.com
+            </span>
+
+            <small>
+                Senha para todas: 123456
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     SISTEMA
+========================================================= -->
+
+<section
+    id="systemScreen"
+    class="system-screen hidden"
+>
+
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            <div class="sidebar-symbol">
+                <img id="logo-sidebar" src="./assets/logo--mente-corpo.png" alt="Logo Espaço Mente e Corpo">
+            </div>
+
+            <div>
+
+                <strong>
+                    Espaço Mente<br>
+                    e Corpo
+                </strong>
+
+                <small>
+                    Clínica Integrada
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- USUÁRIO -->
+
+        <div class="sidebar-user">
+
+            <div
+                id="sidebarAvatar"
+                class="avatar"
+            >
+                AD
+            </div>
+
+            <div>
+
+                <strong id="sidebarUserName">
+                    Administrador
+                </strong>
+
+                <small id="sidebarUserRole">
+                    Administrador
+                </small>
+
+            </div>
+
+        </div>
+
+
+        <!-- MENU -->
+
+        <nav
+            id="sidebarMenu"
+            class="sidebar-menu"
+        >
+        </nav>
+
+
+        <button
+            class="logout-button"
+            onclick="logout()"
+        >
+            <span>↪</span>
+            Sair
+        </button>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <div class="main-area">
+
+
+        <!-- HEADER -->
+
+        <header class="main-header">
+
+
+            <div>
+
+                <span
+                    id="breadcrumb"
+                    class="breadcrumb"
+                >
+                    Dashboard
+                </span>
+
+                <h2 id="pageTitle">
+                    Visão geral
+                </h2>
+
+            </div>
+
+
+            <div class="header-right">
+
+                <button
+                    class="notification-button"
+                    onclick="notificationMessage()"
+                >
+                    🔔
+                </button>
+
+
+                <div class="header-user">
+
+                    <div
+                        id="headerAvatar"
+                        class="avatar small"
+                    >
+                        AD
+                    </div>
+
+                    <span id="headerUserName">
+                        Administrador
+                    </span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- PÁGINA -->
+
+        <main
+            id="pageContent"
+            class="page-content"
+        >
+        </main>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     MODAL
+========================================================= -->
+
+<div
+    id="modalOverlay"
+    class="modal-overlay hidden"
+>
+
+    <div
+        id="modal"
+        class="modal"
+    >
+    </div>
+
+</div>
+
+
+
+<!-- TOAST -->
+
+<div
+    id="toast"
+    class="toast"
+>
+</div>
+
+
+
+<script src="./js/script.js"></script>
+
+</body>
+
+</html>
