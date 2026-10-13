@@ -1,6 +1,0 @@
-| Atributo | Métrica |
-| Disponibilidade | 99% por mês, ou no máximo 7 h 12 min de queda em 30 dias |
-| Desempenho | 95% das consultas de agenda em até 2 s, com 50 usuários simultâneos |
-| Segurança | 100% das funcionalidades protegidas exigem login, e 0 acessos sem permissão |
-| Usabilidade | Agendar em no máximo 3 cliques |
-| Privacidade e LGPD | HTTPS em 100% do tráfego, dados sensíveis protegidos e 100% dos acessos a dados de pacientes em log |
