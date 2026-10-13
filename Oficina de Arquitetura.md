@@ -50,6 +50,3 @@ As decisões também registram alternativas consideradas e consequências para m
 - [`docs/requisitos-de-qualidade.pdf`](docs/requisitos-de-qualidade.pdf) — atributos e métricas de qualidade.
 - [`docs/arquitetura-questoes-3-e-4.pdf`](docs/arquitetura-questoes-3-e-4.pdf) — estilo arquitetural e ADRs.
 
-## Observação
-
-Este repositório reúne a documentação fornecida para o projeto. As tecnologias e os requisitos descritos representam a arquitetura proposta nos documentos; não significam, por si só, que a aplicação já esteja implementada ou que as métricas tenham sido validadas em produção.
